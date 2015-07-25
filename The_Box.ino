@@ -35,6 +35,8 @@ void setup() {
   pinMode(ledMain_yellow, OUTPUT);
   pinMode(ledMain_red, OUTPUT);
   
+  digitalWrite(ledBacklight_yellow, HIGH);
+
   boxServo.attach(3);
   Serial.begin(9600);
 }
@@ -105,14 +107,14 @@ void loop() {
   if (Serial.available() > 0) {          
     char in = (char)Serial.read();
     if (in == 'A') {
+      flicker();
       dance_servo();
       flask_light(1);
-      flicker();
     }
     if (in == 'O') {
+      flicker();
       dance_servo();
       flask_light(0);
-      flicker();
     }
   }
 }
