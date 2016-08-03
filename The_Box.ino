@@ -74,13 +74,13 @@ void loop() {
   update_all();
   if (Serial.available() > 0) {          
     char in = (char)Serial.read();
-    if (in == 'A') {
+    if (in == 'F') {
       flicker();
       dance_servo();
       Gauge.JumpTo(0);
       LED_red.Enable();
     }
-    if (in == 'O') {
+    if (in == 'P') {
       flicker();
       dance_servo();
       Gauge.JumpTo(180);
