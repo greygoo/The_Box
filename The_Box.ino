@@ -1,4 +1,4 @@
-#include <ServoTimer2.h>
+#include <Servo.h>
 #include <LED_Switch.h>
 #include <Arduino.h>
 #include <TrueRandom.h>
@@ -17,10 +17,10 @@ int flickerDuration = 8000;
 int GaugeDuration = 10000;
 int LED_timeout = 9000;
 
-Flicker Flicker1(ledFlicker1_blue, 10, 40, 10, 250,  flickerDuration);
-Flicker Flicker2(ledFlicker1_white, 10, 40, 10, 250, flickerDuration);
-Flicker Flicker3(ledFlicker2_blue, 1, 10, 10, 250, flickerDuration);
-Flicker Flicker4(ledFlicker2_white, 1, 10, 10, 250, flickerDuration);
+Flicker Flicker1(ledFlicker1_blue, 10, 40, 0, 255,  flickerDuration);
+Flicker Flicker2(ledFlicker1_white, 10, 40, 0, 255, flickerDuration);
+Flicker Flicker3(ledFlicker2_blue, 1, 10, 0, 255, flickerDuration);
+Flicker Flicker4(ledFlicker2_white, 1, 10, 0, 255, flickerDuration);
 
 Servo_Jump Gauge(200, 0, 180, GaugeDuration);
 
